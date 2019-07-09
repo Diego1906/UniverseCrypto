@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">UniverseCrypto</string>
+    <string name="error_connection_internet">Sem conexão com a internet.</string>
+    <string name="title_dialog">Atenção</string>
+    <string name="error_500">Erro ao acessar nossos serviços. Tente novamente mais tarde.</string>
+    <string name="generic_error_remote">Erro desconhecido, tente mais tarde.</string>
+</resources>
