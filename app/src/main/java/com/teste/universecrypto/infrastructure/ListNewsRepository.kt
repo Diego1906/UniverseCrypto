@@ -1,9 +1,7 @@
 package com.teste.universecrypto.infrastructure
 
 import android.util.Log
-import androidx.core.content.ContextCompat
 import com.teste.universecrypto.R
-import com.teste.universecrypto.domain.Article
 import com.teste.universecrypto.domain.News
 import com.teste.universecrypto.presentation.ListNewsContract
 import retrofit2.Call
@@ -12,8 +10,7 @@ import retrofit2.Response
 
 class ListNewsRepository(val presenter: ListNewsContract.Presenter) {
 
-    private val TAG = "ListNewsRepository" +
-            ""
+    private val TAG = "LIST_NEWS_REPOSITORY"
 
     fun getRemoteData() {
 

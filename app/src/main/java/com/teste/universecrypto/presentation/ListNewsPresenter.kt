@@ -26,15 +26,18 @@ class ListNewsPresenter(override val view: ListNewsContract.View) : ListNewsCont
     }
 
     override fun getRemoteList() {
+        view.showLoading()
         repository.getRemoteData()
     }
 
     override fun setErrorResponse(@StringRes message: Int) {
+        view.hideLoading()
         view.showDialogMessage(message)
     }
 
     override fun setData(listArticles: List<Article>) {
         listArticles.let {
+            view.hideLoading()
             view.setListAdapter(it)
         }
     }

@@ -2,8 +2,9 @@ package com.teste.universecrypto.domain
 
 import com.google.gson.annotations.Expose
 import com.google.gson.annotations.SerializedName
+import java.io.Serializable
 
-data class Article (
+data class Article(
 
     @SerializedName("source")
     @Expose
@@ -36,4 +37,4 @@ data class Article (
     @SerializedName("content")
     @Expose
     var content: String? = null
-)
+) : Serializable

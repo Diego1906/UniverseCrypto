@@ -1,5 +1,7 @@
 package com.teste.universecrypto.presentation
 
+import android.content.Intent
+import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -41,6 +43,17 @@ class ListNewsAdapter : RecyclerView.Adapter<ItemHolder>() {
             .into(holder.image)
         holder.title.text = item.title
         holder.description.text = item.description
+
+        holder.itemView.setOnClickListener {
+            item.let {
+                val bundle = Bundle()
+                bundle.putSerializable("ITEM", item)
+
+                val intent = Intent(holder.itemView.context, DetailsActivity::class.java)
+                intent.putExtras(bundle)
+                holder.itemView.context.startActivity(intent)
+            }
+        }
     }
 }
 
