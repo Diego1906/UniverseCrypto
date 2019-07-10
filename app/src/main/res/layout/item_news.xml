@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginBottom="@dimen/dimen_4dp"
+    android:layout_marginBottom="@dimen/dimen_8dp"
     app:cardElevation="@dimen/dimen_8dp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -25,11 +24,11 @@
             android:id="@+id/titleItem"
             android:layout_width="@dimen/dimen_0dp"
             android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-light"
             android:padding="@dimen/dimen_8dp"
+            android:textColor="@android:color/black"
             android:textSize="@dimen/dimen_16sp"
             android:textStyle="bold"
-            android:fontFamily="sans-serif-light"
-            android:textColor="@android:color/black"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@id/imageItem"
             app:layout_constraintTop_toTopOf="parent"
@@ -39,9 +38,10 @@
             android:id="@+id/descriptionItem"
             android:layout_width="@dimen/dimen_0dp"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dimen_8dp"
             android:ellipsize="end"
-            android:maxLines="3"
             android:fontFamily="sans-serif-light"
+            android:maxLines="3"
             android:padding="@dimen/dimen_8dp"
             android:textSize="@dimen/dimen_16sp"
             app:layout_constraintEnd_toEndOf="parent"

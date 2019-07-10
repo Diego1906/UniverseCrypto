@@ -11,9 +11,6 @@ import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.snackbar.Snackbar
 import com.teste.universecrypto.R
 import com.teste.universecrypto.domain.Article
-import com.teste.universecrypto.presentation.Utils.Extensions
-import com.teste.universecrypto.presentation.allnews.ListNewsAdapter
-import com.teste.universecrypto.presentation.allnews.ListNewsContract
 import kotlinx.android.synthetic.main.activity_list_news.*
 
 class ListNewsActivity : AppCompatActivity(), ListNewsContract.View {
@@ -49,7 +46,7 @@ class ListNewsActivity : AppCompatActivity(), ListNewsContract.View {
 
     override fun showErrorInternet() {
         Snackbar.make(
-            constrainttNews,
+            constraintNews,
             getString(R.string.connection_off),
             Snackbar.LENGTH_INDEFINITE
         ).setAction(

@@ -6,4 +6,9 @@
     <string name="generic_error_remote">Erro desconhecido, tente mais tarde.</string>
     <string name="connection_off">Sem conexão com a internet.</string>
     <string name="try_again">Tentar novamente</string>
+    <string name="saiba_mais">Saiba mais</string>
+    <string name="date">019-07-09T13:01:32Z</string>
+    <string name="title">Title</string>
+    <string name="content">Content</string>
+    <string name="author">Author</string>
 </resources>

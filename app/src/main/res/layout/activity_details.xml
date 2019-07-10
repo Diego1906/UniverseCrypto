@@ -8,7 +8,6 @@
     android:fillViewport="true"
     tools:context=".presentation.details.DetailsActivity">
 
-
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -26,78 +25,51 @@
 
         <TextView
             android:id="@+id/textTitle"
-            android:textStyle="bold"
-            android:paddingEnd="@dimen/dimen_16dp"
-            android:paddingStart="@dimen/dimen_16dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/dimen_8dp"
-            android:fontFamily="sans-serif-light"
+            style="@style/styleDetails"
             android:gravity="center"
             android:textColor="@android:color/black"
             android:textSize="@dimen/dimen_24sp"
+            android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/imageDetails"
-            tools:text="Title" />
+            tools:text="@string/title" />
 
         <TextView
-            android:paddingEnd="@dimen/dimen_16dp"
-            android:paddingStart="@dimen/dimen_16dp"
             android:id="@+id/textDate"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/dimen_8dp"
-            android:fontFamily="sans-serif-light"
+            style="@style/styleDetails"
             android:textAlignment="viewEnd"
             android:textSize="@dimen/dimen_12sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/textTitle"
-            tools:text="019-07-09T13:01:32Z" />
+            tools:text="@string/date" />
 
         <TextView
-            android:paddingEnd="@dimen/dimen_16dp"
-            android:paddingStart="@dimen/dimen_16dp"
             android:id="@+id/textContent"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/dimen_8dp"
-            android:layout_marginTop="@dimen/dimen_16dp"
-            android:layout_marginBottom="@dimen/dimen_16dp"
-            android:fontFamily="sans-serif-light"
+            style="@style/styleDetails"
             android:textSize="@dimen/dimen_16sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/textDate"
-            tools:text="Content" />
+            tools:text="@string/content" />
 
         <TextView
-            android:paddingEnd="@dimen/dimen_16dp"
-            android:paddingStart="@dimen/dimen_16dp"
             android:id="@+id/textAuthor"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/dimen_8dp"
+            style="@style/styleDetailsTwo"
             android:layout_marginTop="@dimen/dimen_16dp"
-            android:fontFamily="sans-serif-light"
             android:textAlignment="viewEnd"
             android:textStyle="italic"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/textContent"
-            tools:text="Author" />
+            tools:text="@string/author" />
 
         <TextView
-            android:paddingEnd="@dimen/dimen_16dp"
-            android:paddingStart="@dimen/dimen_16dp"
             android:id="@+id/textMore"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/dimen_8dp"
+            style="@style/styleDetailsTwo"
             android:drawableEnd="@drawable/ic_next"
             android:drawablePadding="@dimen/dimen_8dp"
-            android:fontFamily="sans-serif-light"
-            android:text="Saiba mais"
+            android:text="@string/saiba_mais"
             android:textColor="@color/colorNext"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textAuthor" />
