@@ -1,15 +1,21 @@
 package com.teste.universecrypto.presentation
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.net.Uri
+import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
 import androidx.core.app.NavUtils
+import com.bumptech.glide.Glide
+import com.bumptech.glide.request.RequestOptions
 import com.teste.universecrypto.R
 import com.teste.universecrypto.domain.Article
 import kotlinx.android.synthetic.main.activity_details.*
 import java.net.URI
+import java.text.SimpleDateFormat
+import java.util.*
 
 class DetailsActivity : AppCompatActivity(), DetailsContract.View {
 
@@ -28,8 +34,12 @@ class DetailsActivity : AppCompatActivity(), DetailsContract.View {
     }
 
     override fun setDetailsData(item: Article) {
+        Glide.with(this)
+            .load(item.urlToImage)
+           // .apply(RequestOptions.overrideOf(500, 800))
+            .into(imageDetails)
         textTitle?.text = item.title
-        textDate?.text = item.publishedAt
+        textDate?.text = formateDate(item.publishedAt)
         textContent?.text = item.content
         textAuthor?.text = item.author
 
@@ -49,5 +59,17 @@ class DetailsActivity : AppCompatActivity(), DetailsContract.View {
             }
         }
         return super.onOptionsItemSelected(item)
+    }
+
+    @SuppressLint("SimpleDateFormat")
+    override fun formateDate(date: String?): String? {
+
+        val sdf1 = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss", Locale.forLanguageTag("pt"))
+        } else {
+           return date
+        }
+        val sdf2 = SimpleDateFormat("dd-MM-yyyy hh:mma")
+        return sdf2.format(sdf1.parse(date))
     }
 }
