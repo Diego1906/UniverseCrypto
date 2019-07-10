@@ -1,15 +1,19 @@
-package com.teste.universecrypto.presentation
+package com.teste.universecrypto.presentation.allnews
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import androidx.annotation.StringRes
 import androidx.appcompat.app.AlertDialog
+import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.google.android.material.snackbar.Snackbar
 import com.teste.universecrypto.R
 import com.teste.universecrypto.domain.Article
 import com.teste.universecrypto.presentation.Utils.Extensions
+import com.teste.universecrypto.presentation.allnews.ListNewsAdapter
+import com.teste.universecrypto.presentation.allnews.ListNewsContract
 import kotlinx.android.synthetic.main.activity_list_news.*
 
 class ListNewsActivity : AppCompatActivity(), ListNewsContract.View {
@@ -43,16 +47,25 @@ class ListNewsActivity : AppCompatActivity(), ListNewsContract.View {
             .create()
     }
 
+    override fun showErrorInternet() {
+        Snackbar.make(
+            constrainttNews,
+            getString(R.string.connection_off),
+            Snackbar.LENGTH_INDEFINITE
+        ).setAction(
+            getString(R.string.try_again)
+        ) {
+            presenter.checkConnectionIsAvaliable(this)
+        }.setActionTextColor(ContextCompat.getColor(this, android.R.color.holo_green_light))
+            .show()
+    }
+
     override fun hideLoading() {
         progress?.hide()
     }
 
     override fun showLoading() {
         progress?.show()
-    }
-
-    override fun showErrorInternet() {
-        messageInternet?.show()
     }
 
     fun View.show() {

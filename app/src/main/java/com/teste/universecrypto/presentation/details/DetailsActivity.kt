@@ -1,4 +1,4 @@
-package com.teste.universecrypto.presentation
+package com.teste.universecrypto.presentation.details
 
 import android.annotation.SuppressLint
 import android.content.Intent
@@ -9,11 +9,9 @@ import android.os.Bundle
 import android.view.MenuItem
 import androidx.core.app.NavUtils
 import com.bumptech.glide.Glide
-import com.bumptech.glide.request.RequestOptions
 import com.teste.universecrypto.R
 import com.teste.universecrypto.domain.Article
 import kotlinx.android.synthetic.main.activity_details.*
-import java.net.URI
 import java.text.SimpleDateFormat
 import java.util.*
 

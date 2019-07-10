@@ -3,7 +3,7 @@ package com.teste.universecrypto.infrastructure
 import android.util.Log
 import com.teste.universecrypto.R
 import com.teste.universecrypto.domain.News
-import com.teste.universecrypto.presentation.ListNewsContract
+import com.teste.universecrypto.presentation.allnews.ListNewsContract
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response

@@ -12,12 +12,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".presentation.DetailsActivity">
+        <activity android:name=".presentation.details.DetailsActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".presentation.ListNewsActivity" />
+                android:value=".presentation.allnews.ListNewsActivity" />
         </activity>
-        <activity android:name=".presentation.ListNewsActivity">
+        <activity android:name=".presentation.allnews.ListNewsActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

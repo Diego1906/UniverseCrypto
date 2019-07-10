@@ -1,4 +1,4 @@
-package com.teste.universecrypto.presentation
+package com.teste.universecrypto.presentation.allnews
 
 import android.content.Context
 import android.net.ConnectivityManager

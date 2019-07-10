@@ -1,4 +1,4 @@
-package com.teste.universecrypto.presentation
+package com.teste.universecrypto.presentation.details
 
 import com.teste.universecrypto.domain.Article
 import java.util.*

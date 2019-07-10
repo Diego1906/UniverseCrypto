@@ -1,4 +1,4 @@
-package com.teste.universecrypto.presentation
+package com.teste.universecrypto.presentation.allnews
 
 import android.content.Intent
 import android.os.Bundle
@@ -10,6 +10,7 @@ import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 import com.teste.universecrypto.R
 import com.teste.universecrypto.domain.Article
+import com.teste.universecrypto.presentation.details.DetailsActivity
 import kotlinx.android.synthetic.main.item_news.view.*
 
 class ListNewsAdapter : RecyclerView.Adapter<ItemHolder>() {

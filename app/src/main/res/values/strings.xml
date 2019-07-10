@@ -4,4 +4,6 @@
     <string name="title_dialog">Atenção</string>
     <string name="error_500">Erro ao acessar nossos serviços. Tente novamente mais tarde.</string>
     <string name="generic_error_remote">Erro desconhecido, tente mais tarde.</string>
+    <string name="connection_off">Sem conexão com a internet.</string>
+    <string name="try_again">Tentar novamente</string>
 </resources>
