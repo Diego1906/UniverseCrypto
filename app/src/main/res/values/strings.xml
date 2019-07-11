@@ -15,4 +15,5 @@
     <string name="format_date_api">yyyy-MM-dd\'T\'HH:mm:ss</string>
     <string name="format_date_current">dd-MM-yyyy hh:mma</string>
     <string name="language">pt</string>
+    <string name="image_content_description">Foto sobre a notícia</string>
 </resources>
