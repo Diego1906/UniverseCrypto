@@ -2,7 +2,6 @@ package com.teste.universecrypto.presentation.allnews
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
 import androidx.annotation.StringRes
 import androidx.appcompat.app.AlertDialog
 import androidx.core.content.ContextCompat
@@ -11,6 +10,8 @@ import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.snackbar.Snackbar
 import com.teste.universecrypto.R
 import com.teste.universecrypto.domain.Article
+import com.teste.universecrypto.presentation.Utils.hide
+import com.teste.universecrypto.presentation.Utils.show
 import kotlinx.android.synthetic.main.activity_list_news.*
 
 class ListNewsActivity : AppCompatActivity(), ListNewsContract.View {
@@ -63,13 +64,5 @@ class ListNewsActivity : AppCompatActivity(), ListNewsContract.View {
 
     override fun showLoading() {
         progress?.show()
-    }
-
-    fun View.show() {
-        this.visibility = View.VISIBLE
-    }
-
-    fun View.hide() {
-        this.visibility = View.INVISIBLE
     }
 }

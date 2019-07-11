@@ -25,8 +25,8 @@ class DetailsActivity : AppCompatActivity(), DetailsContract.View {
 
         val bundle = intent.extras
         bundle?.let {
-            if (it.containsKey("ITEM")) {
-                setDetailsData(it.getSerializable("ITEM") as Article)
+            if (it.containsKey(this.getString(R.string.item))) {
+                setDetailsData(it.getSerializable(this.getString(R.string.item)) as Article)
             }
         }
     }
@@ -34,7 +34,6 @@ class DetailsActivity : AppCompatActivity(), DetailsContract.View {
     override fun setDetailsData(item: Article) {
         Glide.with(this)
             .load(item.urlToImage)
-           // .apply(RequestOptions.overrideOf(500, 800))
             .into(imageDetails)
         textTitle?.text = item.title
         textDate?.text = formateDate(item.publishedAt)
@@ -63,11 +62,11 @@ class DetailsActivity : AppCompatActivity(), DetailsContract.View {
     override fun formateDate(date: String?): String? {
 
         val sdf1 = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss", Locale.forLanguageTag("pt"))
+            SimpleDateFormat(getString(R.string.format_date_api), Locale.forLanguageTag(getString(R.string.language)))
         } else {
            return date
         }
-        val sdf2 = SimpleDateFormat("dd-MM-yyyy hh:mma")
+        val sdf2 = SimpleDateFormat(getString(R.string.format_date_current))
         return sdf2.format(sdf1.parse(date))
     }
 }

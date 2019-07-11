@@ -1,6 +1,5 @@
 <resources>
     <string name="app_name">Universe Crypto</string>
-    <string name="error_connection_internet">Sem conexão com a internet.</string>
     <string name="title_dialog">Atenção</string>
     <string name="error_500">Erro ao acessar nossos serviços. Tente novamente mais tarde.</string>
     <string name="generic_error_remote">Erro desconhecido, tente mais tarde.</string>
@@ -11,4 +10,9 @@
     <string name="title">Title</string>
     <string name="content">Content</string>
     <string name="author">Author</string>
+    <string name="description">Description</string>
+    <string name="item">ITEM</string>
+    <string name="format_date_api">yyyy-MM-dd\'T\'HH:mm:ss</string>
+    <string name="format_date_current">dd-MM-yyyy hh:mma</string>
+    <string name="language">pt</string>
 </resources>

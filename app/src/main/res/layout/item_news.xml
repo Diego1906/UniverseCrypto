@@ -4,8 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginBottom="@dimen/dimen_8dp"
-    app:cardElevation="@dimen/dimen_8dp">
+    android:layout_marginBottom="@dimen/dimen_16dp"
+    android:background="?android:attr/selectableItemBackground"
+    app:cardElevation="@dimen/dimen_4dp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -32,7 +33,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@id/imageItem"
             app:layout_constraintTop_toTopOf="parent"
-            tools:text="Title" />
+            tools:text="@string/title" />
 
         <TextView
             android:id="@+id/descriptionItem"
@@ -47,7 +48,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@id/imageItem"
             app:layout_constraintTop_toBottomOf="@id/titleItem"
-            tools:text="Description" />
+            tools:text="@string/description" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

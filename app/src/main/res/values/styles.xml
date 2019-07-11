@@ -8,32 +8,19 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
-    <style name="styleDetails">
+    <style name="styleDetails" parent="styleGeneric">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
-
-        <item name="android:layout_margin">@dimen/dimen_8dp</item>
-
         <item name="android:layout_marginTop">@dimen/dimen_16dp</item>
-
         <item name="android:layout_marginBottom">@dimen/dimen_16dp</item>
-
-        <item name="android:fontFamily">sans-serif-light</item>
-        <item name="android:paddingStart">@dimen/dimen_16dp</item>
-        <item name="android:paddingEnd">@dimen/dimen_16dp</item>
     </style>
 
-    <style name="styleDetailsTwo">
+    <style name="styleDetailsSecond" parent="styleGeneric">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
-
-        <item name="android:layout_margin">@dimen/dimen_8dp</item>
-        <item name="android:fontFamily">sans-serif-light</item>
-        <item name="android:paddingStart">@dimen/dimen_16dp</item>
-        <item name="android:paddingEnd">@dimen/dimen_16dp</item>
     </style>
 
-    <style name="styleSpecific">
+    <style name="styleGeneric">
         <item name="android:layout_margin">@dimen/dimen_8dp</item>
         <item name="android:fontFamily">sans-serif-light</item>
         <item name="android:paddingStart">@dimen/dimen_16dp</item>

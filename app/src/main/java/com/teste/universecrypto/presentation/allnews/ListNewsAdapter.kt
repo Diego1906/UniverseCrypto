@@ -48,7 +48,7 @@ class ListNewsAdapter : RecyclerView.Adapter<ItemHolder>() {
         holder.itemView.setOnClickListener {
             item.let {
                 val bundle = Bundle()
-                bundle.putSerializable("ITEM", item)
+                bundle.putSerializable(holder.itemView.context.getString(R.string.item), item)
 
                 val intent = Intent(holder.itemView.context, DetailsActivity::class.java)
                 intent.putExtras(bundle)
