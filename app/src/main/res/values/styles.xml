@@ -31,8 +31,9 @@
         <item name="android:layout_width">@dimen/dimen_0dp</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:fontFamily">sans-serif-light</item>
-        <item name="android:padding">@dimen/dimen_8dp</item>
         <item name="android:textSize">@dimen/dimen_16sp</item>
+        <item name="android:maxLines">3</item>
+        <item name="android:ellipsize">end</item>
     </style>
 
 </resources>
