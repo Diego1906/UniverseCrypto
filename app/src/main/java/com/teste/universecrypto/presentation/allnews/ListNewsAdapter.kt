@@ -13,7 +13,7 @@ import com.teste.universecrypto.domain.Article
 import com.teste.universecrypto.presentation.details.DetailsActivity
 import kotlinx.android.synthetic.main.item_news.view.*
 
-class ListNewsAdapter : RecyclerView.Adapter<ItemHolder>() {
+class ListNewsAdapter : RecyclerView.Adapter<ListNewsAdapter.ItemHolder>() {
 
     var listNews = listOf<Article>()
         set(value) {
@@ -56,14 +56,15 @@ class ListNewsAdapter : RecyclerView.Adapter<ItemHolder>() {
             }
         }
     }
+
+    class ItemHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+
+        val image = itemView.imageItem
+        val title = itemView.titleItem
+        val description = itemView.descriptionItem
+    }
 }
 
-class ItemHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-
-    val image = itemView.imageItem
-    val title = itemView.titleItem
-    val description = itemView.descriptionItem
-}
 
 
 

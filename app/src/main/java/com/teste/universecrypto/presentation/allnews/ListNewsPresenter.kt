@@ -36,9 +36,7 @@ class ListNewsPresenter(override val view: ListNewsContract.View) : ListNewsCont
     }
 
     override fun setData(listArticles: List<Article>) {
-        listArticles.let {
-            view.hideLoading()
-            view.setListAdapter(it)
-        }
+        view.hideLoading()
+        view.setListAdapter(listArticles)
     }
 }

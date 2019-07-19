@@ -17,7 +17,7 @@ class ListNewsRepository(val presenter: ListNewsContract.Presenter) {
         RetrofitConfig().getService().getRemoteList().enqueue(object : Callback<News> {
 
             override fun onFailure(call: Call<News>, t: Throwable) {
-                Log.e(TAG, "Error: ${t.message.toString()}")
+                Log.e(TAG, "Error: ${t.message}")
             }
 
             override fun onResponse(call: Call<News>, response: Response<News>) {

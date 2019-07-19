@@ -26,11 +26,11 @@ class ListNewsActivity : AppCompatActivity(), ListNewsContract.View {
     }
 
     override fun setListAdapter(listArticles: List<Article>) {
-        recyclerAllNews?.layoutManager = LinearLayoutManager(this, RecyclerView.VERTICAL, false)
+        recyclerListlNews?.layoutManager = LinearLayoutManager(this, RecyclerView.VERTICAL, false)
 
         ListNewsAdapter().apply {
             listNews = listArticles
-            recyclerAllNews?.adapter = this
+            recyclerListlNews?.adapter = this
         }
     }
 
