@@ -2,10 +2,6 @@ package com.teste.universecrypto.presentation.Utils
 
 import android.view.View
 
-fun View.show() {
-    this.visibility = View.VISIBLE
-}
-
-fun View.hide() {
-    this.visibility = View.INVISIBLE
+fun View.isVisible(isVisible : Boolean){
+    this.visibility = if(isVisible) View.VISIBLE else View.GONE
 }

@@ -9,9 +9,8 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.snackbar.Snackbar
 import com.teste.universecrypto.R
-import com.teste.universecrypto.domain.Article
-import com.teste.universecrypto.presentation.Utils.hide
-import com.teste.universecrypto.presentation.Utils.show
+import com.teste.universecrypto.domain.entities.Article
+import com.teste.universecrypto.presentation.Utils.isVisible
 import kotlinx.android.synthetic.main.activity_list_news.*
 
 class ListNewsActivity : AppCompatActivity(), ListNewsContract.View {
@@ -59,10 +58,10 @@ class ListNewsActivity : AppCompatActivity(), ListNewsContract.View {
     }
 
     override fun hideLoading() {
-        progress?.hide()
+        progress?.isVisible(false)
     }
 
     override fun showLoading() {
-        progress?.show()
+        progress?.isVisible(true)
     }
 }

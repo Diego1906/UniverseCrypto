@@ -3,7 +3,7 @@ package com.teste.universecrypto.presentation.allnews
 import android.content.Context
 import android.net.ConnectivityManager
 import androidx.annotation.StringRes
-import com.teste.universecrypto.domain.Article
+import com.teste.universecrypto.domain.entities.Article
 import com.teste.universecrypto.infrastructure.ListNewsRepository
 
 class ListNewsPresenter(override val view: ListNewsContract.View) : ListNewsContract.Presenter {

@@ -7,85 +7,96 @@
     android:fillViewport="true"
     tools:context=".presentation.details.DetailsActivity">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:paddingBottom="@dimen/dimen_16dp">
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimen_4dp"
+        android:layout_marginTop="@dimen/dimen_4dp"
+        android:layout_marginEnd="@dimen/dimen_4dp"
+        android:layout_marginBottom="@dimen/dimen_8dp"
+        app:cardElevation="@dimen/dimen_4dp">
 
-        <ImageView
-            android:id="@+id/imageDetails"
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:contentDescription="@string/image_content_description"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_weight="3"
-            tools:src="@drawable/ic_placeholder" />
+            android:layout_height="match_parent"
+            android:padding="@dimen/dimen_12dp">
 
-        <TextView
-            android:id="@+id/textTitle"
-            style="@style/styleDetails"
-            android:gravity="center"
-            android:textColor="@android:color/black"
-            android:textSize="@dimen/dimen_24sp"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/imageDetails"
-            tools:text="@string/title" />
+            <ImageView
+                android:id="@+id/imageDetails"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/image_content_description"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_weight="3"
+                tools:src="@drawable/ic_placeholder" />
 
-        <TextView
-            android:id="@+id/textDate"
-            style="@style/styleDetails"
-            android:textAlignment="viewEnd"
-            android:textSize="@dimen/dimen_12sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/textTitle"
-            tools:text="@string/date" />
+            <TextView
+                android:id="@+id/textTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_16dp"
+                android:gravity="left"
+                android:paddingStart="@dimen/dimen_4dp"
+                android:paddingEnd="@dimen/dimen_4dp"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/imageDetails"
+                tools:text="@string/title" />
 
-        <View
-            android:id="@+id/viewLine"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/dimen_1dp"
-            android:layout_marginStart="@dimen/dimen_8dp"
-            android:layout_marginTop="@dimen/dimen_4dp"
-            android:layout_marginEnd="@dimen/dimen_8dp"
-            android:background="@android:color/black"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/textDate" />
+            <TextView
+                android:id="@+id/textDate"
+                style="@style/styleDetails"
+                android:paddingTop="@dimen/dimen_16dp"
+                android:textAlignment="viewEnd"
+                android:textSize="@dimen/dimen_16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textTitle"
+                tools:text="@string/date" />
 
-        <TextView
-            android:id="@+id/textContent"
-            style="@style/styleDetails"
-            android:textSize="@dimen/dimen_16sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/viewLine"
-            tools:text="@string/content" />
 
-        <TextView
-            android:id="@+id/textAuthor"
-            style="@style/styleDetailsSecond"
-            android:layout_marginTop="@dimen/dimen_16dp"
-            android:textAlignment="viewEnd"
-            android:textStyle="italic"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/textContent"
-            tools:text="@string/author" />
+            <TextView
+                android:id="@+id/textContent"
+                style="@style/styleDetails"
+                android:background="@drawable/border_know_more"
+                android:padding="@dimen/dimen_16dp"
+                android:textSize="@dimen/dimen_16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textDate"
+                tools:text="@string/content" />
 
-        <TextView
-            android:id="@+id/textMore"
-            style="@style/styleDetailsSecond"
-            android:drawableEnd="@drawable/ic_next"
-            android:drawablePadding="@dimen/dimen_8dp"
-            android:text="@string/saiba_mais"
-            android:textColor="@color/colorNext"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textAuthor" />
+            <TextView
+                android:id="@+id/textAuthor"
+                style="@style/styleDetailsSecond"
+                android:layout_marginTop="@dimen/dimen_16dp"
+                android:textAlignment="viewEnd"
+                android:textStyle="italic"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textContent"
+                tools:text="@string/author" />
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+            <TextView
+                android:id="@+id/textMore"
+                style="@style/styleDetailsSecond"
+                android:layout_height="50dp"
+                android:layout_marginBottom="24dp"
+                android:background="@drawable/border_know_more"
+                android:drawableEnd="@drawable/ic_next"
+                android:drawablePadding="@dimen/dimen_8dp"
+                android:gravity="center"
+                android:text="@string/saiba_mais"
+                android:textColor="@color/colorNext"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textAuthor" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
 
 </androidx.core.widget.NestedScrollView>

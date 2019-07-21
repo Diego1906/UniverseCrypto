@@ -9,7 +9,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 import com.teste.universecrypto.R
-import com.teste.universecrypto.domain.Article
+import com.teste.universecrypto.domain.entities.Article
 import com.teste.universecrypto.presentation.details.DetailsActivity
 import kotlinx.android.synthetic.main.item_news.view.*
 
@@ -28,6 +28,7 @@ class ListNewsAdapter : RecyclerView.Adapter<ListNewsAdapter.ItemHolder>() {
         val view = LayoutInflater
             .from(parent.context)
             .inflate(R.layout.item_news, parent, false)
+
         return ItemHolder(view)
     }
 
@@ -35,7 +36,7 @@ class ListNewsAdapter : RecyclerView.Adapter<ListNewsAdapter.ItemHolder>() {
 
     override fun onBindViewHolder(holder: ItemHolder, position: Int) {
 
-        val item = listNews[position]
+         val item = listNews[position]
 
         Glide.with(holder.itemView)
             .load(item.urlToImage)

@@ -2,7 +2,7 @@ package com.teste.universecrypto.presentation.allnews
 
 import android.content.Context
 import androidx.annotation.StringRes
-import com.teste.universecrypto.domain.Article
+import com.teste.universecrypto.domain.entities.Article
 
 object ListNewsContract {
 

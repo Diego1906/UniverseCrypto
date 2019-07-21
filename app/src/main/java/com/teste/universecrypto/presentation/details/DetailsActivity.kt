@@ -10,7 +10,7 @@ import android.view.MenuItem
 import androidx.core.app.NavUtils
 import com.bumptech.glide.Glide
 import com.teste.universecrypto.R
-import com.teste.universecrypto.domain.Article
+import com.teste.universecrypto.domain.entities.Article
 import kotlinx.android.synthetic.main.activity_details.*
 import java.text.SimpleDateFormat
 import java.util.*

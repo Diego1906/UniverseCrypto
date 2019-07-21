@@ -1,6 +1,6 @@
 package com.teste.universecrypto.infrastructure
 
-import com.teste.universecrypto.domain.News
+import com.teste.universecrypto.domain.entities.News
 import retrofit2.Call
 import retrofit2.http.GET
 
